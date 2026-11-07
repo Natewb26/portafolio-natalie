@@ -1,0 +1,162 @@
+
+/* ======================================
+   TARJETAS DE PROYECTOS
+   ====================================== */
+
+/* Organiza las evidencias en columnas. */
+.proyectos-grid {
+  align-items: start;
+}
+
+/* Estilo especial de los proyectos. */
+.proyecto-tarjeta {
+  overflow: hidden;
+
+  background: linear-gradient(
+    160deg,
+    #1e293b,
+    #172033
+  );
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* Eleva discretamente la tarjeta al pasar el cursor. */
+.proyecto-tarjeta:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+
+/* Separa la información principal. */
+.proyecto-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Tecnologías empleadas. */
+.proyecto-tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 16px;
+}
+
+.proyecto-tecnologias span {
+  padding: 6px 10px;
+
+  color: #7dd3fc;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 6px;
+
+  font-size: 12px;
+}
+
+/* ======================================
+   GALERÍA DE CAPTURAS
+   ====================================== */
+
+.proyecto-galeria {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Establece un tamaño uniforme para imágenes. */
+.proyecto-galeria img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+
+  border: 1px solid #334155;
+  border-radius: 8px;
+
+  transition: opacity 0.2s ease;
+}
+
+.proyecto-galeria a:hover img {
+  opacity: 0.8;
+}
+
+/* ======================================
+   DETALLES ACADÉMICOS
+   ====================================== */
+
+.proyecto-detalles {
+  margin-top: 24px;
+  border-top: 1px solid #334155;
+}
+
+/* Encabezado que abre o cierra la ficha. */
+.proyecto-detalles summary {
+  padding: 18px 0 6px;
+
+  color: #38bdf8;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Distribución de la ficha desplegada. */
+.proyecto-ficha {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding-top: 20px;
+}
+
+.proyecto-ficha h4 {
+  margin-bottom: 8px;
+  color: #f8fafc;
+  font-size: 15px;
+}
+
+.proyecto-ficha p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+/* Enlace opcional al repositorio. */
+.proyecto-enlace {
+  display: inline-block;
+  margin-top: 20px;
+
+  color: #7dd3fc;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.proyecto-enlace:hover {
+  text-decoration: underline;
+}
+
+/* Indicadores de foco para teclado. */
+.proyecto-detalles summary:focus-visible,
+.proyecto-enlace:focus-visible,
+.proyecto-galeria a:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 4px;
+}
+
+/* Evita movimientos si el usuario
+   prefiere reducir las animaciones. */
+@media (prefers-reduced-motion: reduce) {
+  .proyecto-tarjeta {
+    transition: none;
+  }
+
+  .proyecto-tarjeta:hover {
+    transform: none;
+  }
+}

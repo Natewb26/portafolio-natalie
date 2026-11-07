@@ -1,0 +1,141 @@
+
+/* ========================================
+   SECCIÓN CONTACTO
+   ======================================== */
+
+/* Centra los elementos de la sección. */
+.contacto-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* Limita el ancho de la presentación. */
+.contacto-descripcion {
+  max-width: 650px;
+
+  color: #cbd5e1;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Distribución de botones. */
+.contacto-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+
+  margin-top: 32px;
+}
+
+/* Estilo compartido de los tres botones. */
+.contacto-boton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 48px;
+  padding: 12px 22px;
+
+  border: 1px solid transparent;
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Botón principal: GitHub. */
+.contacto-principal {
+  color: white;
+  background-color: #0284c7;
+}
+
+.contacto-principal:hover {
+  background-color: #0369a1;
+  transform: translateY(-2px);
+}
+
+/* Botones secundarios: correo y CV. */
+.contacto-secundario {
+  color: #e2e8f0;
+  background-color: #1e293b;
+  border-color: #475569;
+}
+
+.contacto-secundario:hover {
+  background-color: #273449;
+  border-color: #38bdf8;
+  transform: translateY(-2px);
+}
+
+/* Texto con información adicional. */
+.contacto-informacion {
+  margin-top: 35px;
+  padding-top: 24px;
+  width: 100%;
+  max-width: 500px;
+
+  border-top: 1px solid #334155;
+}
+
+.contacto-informacion p {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Etiqueta informativa. */
+.contacto-informacion span {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* Dirección de correo. */
+.contacto-informacion a {
+  color: #7dd3fc;
+  font-size: 15px;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contacto-informacion a:hover {
+  text-decoration: underline;
+}
+
+/* Foco visible al utilizar el teclado. */
+.contacto-contenedor a:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 4px;
+}
+
+/* Distribución en celulares. */
+@media (max-width: 600px) {
+  .contacto-acciones {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .contacto-boton {
+    width: 100%;
+  }
+}
+
+/* Reduce animaciones cuando corresponda. */
+@media (prefers-reduced-motion: reduce) {
+  .contacto-boton {
+    transition: none;
+  }
+
+  .contacto-boton:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,141 @@
+
+/* ======================================
+   PRESENTACIÓN PROFESIONAL
+   ====================================== */
+
+/* Fondo con iluminación azul discreta. */
+.inicio-profesional {
+  position: relative;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 30%,
+      rgba(14, 165, 233, 0.13),
+      transparent 60%
+    ),
+    #0f172a;
+}
+
+/* Mantiene el contenido por encima del fondo. */
+.inicio-contenido {
+  position: relative;
+  z-index: 1;
+}
+
+/* Etiqueta tecnológica. */
+.inicio-etiqueta {
+  display: inline-block;
+  margin-bottom: 28px;
+  padding: 9px 18px;
+
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 30px;
+
+  font-family: monospace;
+  font-size: 13px;
+}
+
+/* Limita el ancho del nombre principal. */
+.inicio-profesional h1 {
+  max-width: 850px;
+  margin: 0 auto 24px;
+}
+
+/* Resalta el nombre mediante un degradado. */
+.inicio-profesional h1 span {
+  display: block;
+
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #818cf8
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Etiquetas con tecnologías utilizadas. */
+.inicio-tecnologias {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 35px;
+}
+
+/* Diseño de cada tecnología. */
+.inicio-tecnologias span {
+  padding: 8px 15px;
+
+  color: #cbd5e1;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 30px;
+
+  font-size: 13px;
+}
+
+/* Enlace de GitHub con estilo de botón suave. */
+.inicio-github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 26px;
+  padding: 12px 22px;
+
+  color: #7dd3fc;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.inicio-github:hover {
+  background: rgba(56, 189, 248, 0.14);
+  border-color: rgba(56, 189, 248, 0.45);
+  transform: translateY(-2px);
+}
+
+.inicio-github:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 4px;
+}
+
+.inicio-github:hover {
+  text-decoration: underline;
+}
+
+/* Accesibilidad para navegación con teclado. */
+.inicio-github:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 5px;
+}
+
+/* Ajustes para pantallas pequeñas. */
+@media (max-width: 600px) {
+  .inicio-etiqueta {
+    font-size: 11px;
+  }
+
+  .inicio-tecnologias {
+    gap: 8px;
+  }
+
+  .inicio-tecnologias span {
+    font-size: 12px;
+  }
+}
